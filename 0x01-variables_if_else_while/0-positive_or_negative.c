@@ -1,27 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include <time.h>
-/**
- * main -generate random numbers to detect -ve or +ve
- *
- * Return: always (0)
- *
- */
-int main(void)
-{
-int n;
 
-srand(time(0));
-n = rand() - RAND_MAX / 2;
-if (n > 0)
-{
-	printf("%d is positive\n", n);
-}
-else if (n == 0)
-{
-	printf("5d is zero\n", n);
-}
-else
-{
-	printf("%d is negative\n");
-}
-return (0);
+int main() {
+    srand(time(NULL));  // Seed the random number generator with the current time
+
+    int n = rand();  // Generate a random number
+    
+    printf("The number %d is ", n);
+
+    if (n > 0) {
+        printf("positive");
+    } else if (n < 0) {
+        printf("negative");
+    } else {
+        printf("zero");
+    }
+
+    printf("\n");
+
+    return 0;
 }

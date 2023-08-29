@@ -1,4 +1,4 @@
-#include <main.h>
+#include "main.h"
 
 /**
  * _strspn -Entry point
@@ -10,9 +10,9 @@ unsigned int _strspn(char *s, char *accept)
 {
 unsigned int i, n, value, check;
 
-value = 0
+value = 0;
 
-for (i = 0; s[i] != '\0'; n++)
+for (i = 0; s[i] != '\0'; i++)
 {
 	check = 0;
 
